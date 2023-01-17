@@ -5,7 +5,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: all .3s;
 }
 
 .promotion-wrapper {
@@ -108,7 +107,11 @@
 }
 
 
-@media (max-width: 768px) {
+@media (max-width: 550px) {
+    .promotion {
+        background: url(../images/hero-m.jpg);
+    }
+    
     .p-text h1 {
         font-size: 40px;
     }
@@ -116,5 +119,9 @@
     .p-text h5 {
         font-size: 18px;
         font-weight: 300;
+    }
+
+    .pBtn {
+        background-color: var(--main-color);
     }
 }

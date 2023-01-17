@@ -31,13 +31,24 @@
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <script data-cfasync="false" src="https://cdn.rawgit.com/dwyl/html-form-send-email-via-google-script-without-server/master/form-submission-handler.js"></script>
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+    <script src="js/jquery.scrollTo.min.js"></script>
+    <script src="owl/owl.carousel.min.js"></script>
+    <script src="js/header.fixed.js"></script>
+    <script src="js/aos.js"></script>
     <title>스터디 예약 플랫폼 - 하모</title>
 </head>
 <body>
     <header>
         <nav>
-            <a href="#1" class="logo-w"><img src="images/logo-w.svg"></a>
-            <a href="#1" class="logo active"><img src="images/logo.svg"></a>
+            <picture class="logo-w">
+                <source srcset="images/logo-w-m.png" media="(max-width: 550px)">
+                <img src="images/logo-w.png">
+            </picture>
+            <picture class="logo active">
+                <source srcset="images/logo-m.png" media="(max-width: 550px)">
+                <img src="images/logo.png">
+            </picture>
             <input type="checkbox" id="check">
             <label for="check">
                 <div class="menuBtns">
@@ -46,6 +57,14 @@
                     <div class="bar3"></div>
                 </div>
             </label>
+            <ul class="gnb-m">
+                <li><a href="#2">업체소개</a></li>
+                <li><a href="#3">특장점</a></li>
+                <li><a href="#4">입점절차</a></li>
+                <li><a href="#5">서비스후기</a></li>
+                <li><a href="#6">파트너사</a></li>
+                <a href="" target="_blank"><li>공지사항</li></a>
+            </ul>
             <div class="gnb">
                 <ul>
                     <li><a href="#2">업체소개</a></li>
@@ -67,14 +86,14 @@
         <section class="article promotion" id="1">
             <div class="promotion-wrapper">
                 <div class="p-text">
-                    <h5>
+                    <h5 data-aos="zoom-out">
                         스터디공간 운영은 똑똑한 하모에서!
                     </h5>
-                    <h1>
+                    <h1 data-aos="zoom-out" data-aos-delay="500">
                         스마트한 공간 설계<br/>
                         하모와 함께하세요
                     </h1>
-                    <a href="#2" class="pBtn">
+                    <a href="#2" class="pBtn" data-aos="fade-down" data-aos-delay="800">
                         <h2>더 알아보기</h2>
                         <i class="ri-arrow-right-s-line"></i>
                     </a>
@@ -93,28 +112,28 @@
                     </h1>
                 </div>
                 <div class="a1-box-wrapper">
-                    <div class="a1-box">
+                    <div class="a1-box" data-aos="fade-up" data-aos-delay="100">
                         <p>
                             쉽고 편리한<br/>
                             운영솔루션
                         </p>
                         <img src="images/a1-1.png">
                     </div>
-                    <div class="a1-box">
+                    <div class="a1-box" data-aos="fade-up" data-aos-delay="150">
                         <p>
                             간편한<br/>
                             예약시스템
                         </p>
                         <img src="images/a1-2.png">
                     </div>
-                    <div class="a1-box">
+                    <div class="a1-box" data-aos="fade-up" data-aos-delay="200">
                         <p>
                             생동감 넘치는<br/>
                             3D 공간뷰어
                         </p>
                         <img src="images/a1-3.png">
                     </div>
-                    <div class="a1-box">
+                    <div class="a1-box" data-aos="fade-up" data-aos-delay="250">
                         <p>
                             공간 홍보용<br/>
                             랜딩페이지 제작
@@ -128,7 +147,7 @@
             <div class="article-wrapper">
                 <div class="a2-box-wrapper">
                     <div class="a2-box">
-                        <div class="a2-box-text">
+                        <div class="a2-box-text" data-aos="fade-right" data-aos-delay="400">
                             <h2>
                                 3D Room Tour
                             </h2>
@@ -145,12 +164,12 @@
                                 <i class="ri-arrow-right-s-line"></i>
                             </a>
                         </div>
-                        <div class="a2-box-image">
+                        <div class="a2-box-image" data-aos="fade-left" data-aos-delay="400">
                             <img src="images/a2-1.jpg">
                         </div>
                     </div>
                     <div class="a2-box">
-                        <div class="a2-box-text">
+                        <div class="a2-box-text" data-aos="fade-right" data-aos-delay="400">
                             <h2>
                                 Untact Solution
                             </h2>
@@ -167,12 +186,12 @@
                                 <i class="ri-arrow-right-s-line"></i>
                             </a>
                         </div>
-                        <div class="a2-box-image">
+                        <div class="a2-box-image" data-aos="fade-left" data-aos-delay="400">
                             <img src="images/a2-2.jpg">
                         </div>
                     </div>
                     <div class="a2-box">
-                        <div class="a2-box-text">
+                        <div class="a2-box-text" data-aos="fade-right" data-aos-delay="400">
                             <h2>
                                 AI Space Recommendation
                             </h2>
@@ -189,12 +208,12 @@
                                 <i class="ri-arrow-right-s-line"></i>
                             </a>
                         </div>
-                        <div class="a2-box-image">
+                        <div class="a2-box-image" data-aos="fade-left" data-aos-delay="400">
                             <img src="images/a2-3.jpg">
                         </div>
                     </div>
                     <div class="a2-box">
-                        <div class="a2-box-text">
+                        <div class="a2-box-text" data-aos="fade-right" data-aos-delay="400">
                             <h2>
                                 Landing Page Production
                             </h2>
@@ -211,7 +230,7 @@
                                 <i class="ri-arrow-right-s-line"></i>
                             </a>
                         </div>
-                        <div class="a2-box-image">
+                        <div class="a2-box-image" data-aos="fade-left" data-aos-delay="400">
                             <img src="images/a2-4.jpg">
                         </div>
                     </div>
@@ -683,7 +702,75 @@
         </section>
         <section class="article article5" id="6">
             <div class="article-wrapper">
-                4
+                <div class="a5-title">
+                    <h1>
+                        파트너사
+                    </h1>
+                </div>
+                <div class="a5-wrapper">
+                    <img src="images/partners/p10.jpg">
+                    <img src="images/partners/p11.jpg">
+                    <img src="images/partners/p12.jpg">
+                    <img src="images/partners/p13.jpg">
+                    <img src="images/partners/p14.jpg">
+                    <img src="images/partners/p1.jpg">
+                    <img src="images/partners/p2.jpg">
+                    <img src="images/partners/p3.jpg">
+                    <img src="images/partners/p4.jpg">
+                    <img src="images/partners/p5.jpg">
+                    <img src="images/partners/p6.jpg">
+                    <img src="images/partners/p7.jpg">
+                    <img src="images/partners/p8.jpg">
+                    <img src="images/partners/p9.jpg">
+                    <img src="images/partners/p15.jpg">
+                    <img src="images/partners/p16.jpg">
+                    <img src="images/partners/p17.jpg">
+                    <img src="images/partners/p18.jpg">
+                    <img src="images/partners/p19.jpg">
+                    <img src="images/partners/p20.jpg">
+                    <img src="images/partners/p21.jpg">
+                    <img src="images/partners/p22.jpg">
+                    <img src="images/partners/p23.jpg">
+                    <img src="images/partners/p24.jpg">
+                    <img src="images/partners/p25.jpg">
+                    <img src="images/partners/p26.jpg">
+                    <img src="images/partners/p27.jpg">
+                    <img src="images/partners/p28.jpg">
+                    <img src="images/partners/p29.jpg">
+                    <img src="images/partners/p30.jpg">
+                </div>
+                <div class="a5-wrapper">
+                    <img src="images/partners/p15.jpg">
+                    <img src="images/partners/p16.jpg">
+                    <img src="images/partners/p18.jpg">
+                    <img src="images/partners/p19.jpg">
+                    <img src="images/partners/p20.jpg">
+                    <img src="images/partners/p28.jpg">
+                    <img src="images/partners/p17.jpg">
+                    <img src="images/partners/p21.jpg">
+                    <img src="images/partners/p23.jpg">
+                    <img src="images/partners/p22.jpg">
+                    <img src="images/partners/p1.jpg">
+                    <img src="images/partners/p2.jpg">
+                    <img src="images/partners/p3.jpg">
+                    <img src="images/partners/p5.jpg">
+                    <img src="images/partners/p6.jpg">
+                    <img src="images/partners/p4.jpg">
+                    <img src="images/partners/p7.jpg">
+                    <img src="images/partners/p8.jpg">
+                    <img src="images/partners/p9.jpg">
+                    <img src="images/partners/p25.jpg">
+                    <img src="images/partners/p26.jpg">
+                    <img src="images/partners/p27.jpg">
+                    <img src="images/partners/p10.jpg">
+                    <img src="images/partners/p29.jpg">
+                    <img src="images/partners/p11.jpg">
+                    <img src="images/partners/p12.jpg">
+                    <img src="images/partners/p13.jpg">
+                    <img src="images/partners/p30.jpg">
+                    <img src="images/partners/p14.jpg">
+                    <img src="images/partners/p24.jpg">
+                </div>
             </div>
         </section>
         <section class="article article6" id="7">
@@ -744,7 +831,7 @@
                         </div>
                         <div class="f-personal">
                             <div class="f-personal-text">
-                                <input type="checkbox" id="cb" checked required />
+                                <input type="checkbox" id="cb" required />
                                 <label for="cb">
                                     <em></em>
                                     <p>
@@ -756,7 +843,7 @@
                                 <p>전문보기</p>
                             </div>
                         </div>
-                        <button type="submit" class="f-submit"><p>제출하기</p></button>
+                        <button type="submit" class="f-submit" disabled><p>제출하기</p></button>
                     </form>
                 </div>
             </div>
@@ -787,217 +874,6 @@
         </div>
     </footer>
 
-    <script src="https://code.jquery.com/jquery-latest.js"></script>
-    <script src="js/aos.js"></script>
-    <script>
-        AOS.init({
-            once: true
-        })
-    </script>
-
-    <script src="owl/owl.carousel.min.js"></script>
-    <script>
-        $(function () {
-            $('.owl-carousel').owlCarousel({
-                loop: true,
-                center: true,
-                margin: 35,
-                autoWidth:true,
-                autoplay: true,
-                autoplayTimeout: 4000,
-                autoplayHoverPause: true,
-                responsive: {
-                    0: {
-                        items: 1,
-                        margin: 10,
-                    },
-                    1200: {
-                        items: 3,
-                    }
-                }
-            });
-        });
-    </script>
-    
-    <script>
-        $(function () {
-            $(".floating").hide();
-            $(function () {
-                $(window).scroll(function () {
-                    if ($(this).scrollTop() > 200) {
-                        $('.floating').fadeIn();
-                        $('.scrollDown').fadeOut();
-                    } else {
-                        $('.floating').fadeOut();
-                        $('.scrollDown').fadeIn();
-                    }
-                });
-            });
-        });
-    </script>
-    
-    <script>
-        $(document).on("keyup", ".phoneNumber", function () {
-            $(this).val($(this).val().replace(/[^0-9]/g, "").replace(/(^02|^0505|^1[0-9]{3}|^0[0-9]{2})([0-9]+)?([0-9]{4})$/, "$1-$2-$3").replace("--", "-"));
-        });
-    </script>
-    
-    <script>
-        $(window).on('scroll', function () {
-            $('section').each(function () {
-                if ($(window).scrollTop() >= $(this).offset().top - 500) {
-                    var id = $(this).attr('id');
-                    $('nav ul li a').removeClass('actives');
-                    $('nav ul li a[href=#' + id + ']').addClass('actives');
-                }
-            });
-        });
-    </script>
-    
-    <script src="js/jquery.scrollTo.min.js"></script>
-    <script>
-        $(function () {
-            $('.logo, .logo-w, nav ul li a, .askBtn, .p-text a').click(function (e) {
-                $.scrollTo(this.hash || 0, 500);
-                e.preventDefault();
-            });
-        });
-    </script>
-    
-    <script src="js/header.fixed.js"></script>
-    
-    <script>
-        $('.menuBtns').click(function () {
-            $(this).toggleClass('change')
-        })
-    
-        $('nav ul li a').click(function () {
-            $('#check').prop('checked', false)
-            $('.menuBtns').removeClass('change')
-        })
-    
-        $('.overlay').click(function () {
-            $('#check').prop('checked', false)
-            $('.menuBtns').removeClass('change')
-        })
-    </script>
-
-    <script>
-        var isVisible = false;
-
-        $(window).on('scroll', function () {
-            if (checkVisible($('.a3-box-wrapper')) && !isVisible) {
-                $(function () {
-                    var idx = 0;
-                    setInterval(time, 800);
-                    function time() {
-                        var box = $('.a3-box-num');
-                        box.removeClass('on');
-                        box.eq(idx).addClass('on');
-                        idx++;
-                        if (idx >= 7) idx = 0;
-                    }
-                });
-
-                $(function () {
-                    var idx = 0;
-                    setInterval(time, 800);
-                    function time() {
-                        var box2 = $('.a3-box');
-                        box2.removeClass('on');
-                        box2.eq(idx).addClass('on');
-                        idx++;
-                        if (idx >= 7) idx = 0;
-                    }
-                });
-
-                isVisible = true;
-            }
-        });
-
-        function checkVisible(elm, eval) {
-            eval = eval || "object visible";
-            var viewportHeight = $(window).height(), // Viewport Height
-                scrolltop = $(window).scrollTop(), // Scroll Top
-                y = $(elm).offset().top,
-                elementHeight = $(elm).height();
-
-            if (eval == "object visible") return ((y < (viewportHeight + scrolltop)) && (y > (scrolltop - elementHeight)));
-            if (eval == "above") return ((y < (viewportHeight + scrolltop)));
-        }
-    </script>
-
-    <script>
-        $('.f-personal-text').click(function () {
-            if ($('#cb').is(':checked')) {
-                $('.f-personal').removeClass('f-personal-no');
-                $('.f-personal-text label p').html('개인정보취급방침을 읽었으며, 이에 동의합니다.');
-                $('.gform .f-submit').attr('disabled', false);
-            } else {
-                $('.f-personal').addClass('f-personal-no');
-                $('.f-personal-text label p').html('개인정보취급방침에 동의하셔야 문의하실 수 있습니다.');
-                $('.gform .f-submit').attr('disabled', true);
-            }
-        })
-        
-        $('.f-personalBtn').click(function () {
-            $('.f-popup-wrapper').fadeIn().css('display','flex');
-        })
-
-        $('.f-popup-wrapper').click(function () {
-            $(this).fadeOut();
-        })
-    </script>
-    
-    <script>
-        if (navigator.userAgent.indexOf("Trident") > 0) {
-            alert("이 사이트에 대한 Internet Explorer 지원이 종료되었습니다. " +
-                "확인 버튼을 누르면 Edge 브라우저로 이동합니다.")
-            window.location = 'microsoft-edge:' + window.location.href;
-        }
-    </script>
-
-    <!-- Channel Plugin Scripts -->
-    <script>
-        (function () {
-            var w = window;
-            if (w.ChannelIO) {
-                return (window.console.error || window.console.log || function () { })('ChannelIO script included twice.');
-            }
-            var ch = function () {
-                ch.c(arguments);
-            };
-            ch.q = [];
-            ch.c = function (args) {
-                ch.q.push(args);
-            };
-            w.ChannelIO = ch;
-            function l() {
-                if (w.ChannelIOInitialized) {
-                    return;
-                }
-                w.ChannelIOInitialized = true;
-                var s = document.createElement('script');
-                s.type = 'text/javascript';
-                s.async = true;
-                s.src = 'https://cdn.channel.io/plugin/ch-plugin-web.js';
-                s.charset = 'UTF-8';
-                var x = document.getElementsByTagName('script')[0];
-                x.parentNode.insertBefore(s, x);
-            }
-            if (document.readyState === 'complete') {
-                l();
-            } else if (window.attachEvent) {
-                window.attachEvent('onload', l);
-            } else {
-                window.addEventListener('DOMContentLoaded', l, false);
-                window.addEventListener('load', l, false);
-            }
-        })();
-        ChannelIO('boot', {
-            "pluginKey": "fb8a571f-05b8-44ff-96f1-937222fa69f1"
-        });
-    </script>
-    <!-- End Channel Plugin -->
+    <script src="js/common.js"></script>
 </body>
 </html>

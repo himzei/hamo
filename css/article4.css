@@ -94,25 +94,32 @@
 }
 
 
-@media (max-width: 600px) {
+@media (max-width: 550px) {
+    .a4-title h1 {
+        font-size: 32px;
+        margin-bottom: 1rem;
+    }
+    
     .item {
-        width: 350px;
-        height: 300px;
+        width: 300px;
+        height: 220px;
         gap: 1rem;
+        padding: 20px;
         box-shadow: 0 10px 10px 0 rgba(0, 0, 0, .05);
     }
 
-    .o-profile h1 {
-        font-size: 18px;
+    .o-profile img {
+        width: 30px !important;
     }
-
+    
+    .o-profile h1,
     .o-star i {
-        font-size: 18px;
+        font-size: 15px;
     }
 
     .o-bottom p {
-        height: 160px;
-        font-size: 15px;
+        height: 140px;
+        font-size: 13px;
         padding-right: 10px;
     }
 }

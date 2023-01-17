@@ -87,3 +87,55 @@
     font-weight: 500;
     margin-bottom: 2rem;
 }
+
+
+/*==================================================*/
+@media (max-width: 950px) {
+    .a3-box-wrapper {
+        gap: 1rem;
+    }
+    
+    .a3-box-group {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+    .a3-box {
+        width: 100%;
+    }
+}
+
+
+@media (max-width: 550px) {
+    .a3-title h1 {
+        font-size: 32px;
+        margin-bottom: 2rem;
+    }
+    
+    .a3-box {
+        border-radius: 7px;
+    }
+    
+    .a3-box-num {
+        width: 40px;
+        height: 32px;
+    }
+
+    .a3-box-num p {
+        font-size: 13px;
+    }
+    
+    .a3-box-image img {
+        height: 60px;
+    }
+
+    .a3-box-text {
+        height: unset;
+    }
+
+    .a3-box-text h1 {
+        font-size: 14px;
+        margin-bottom: 1rem;
+    }
+}

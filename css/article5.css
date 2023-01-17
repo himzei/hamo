@@ -1,0 +1,65 @@
+.a5-title h1 {
+    color: #222;
+    font-size: 45px;
+    font-weight: 800;
+    line-height: 1.3;
+    text-align: center;
+    margin-bottom: 5rem;
+}
+
+.a5-wrapper {
+    width: 6240px;
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    animation: slide-left 60s linear infinite;
+}
+
+.a5-wrapper:last-child {
+    flex-direction: row-reverse;
+    margin-top: 60px;
+    animation: slide-right 60s linear infinite;
+}
+
+.a5-wrapper:hover {
+    animation-play-state: paused;
+}
+
+
+@keyframes slide-left {
+    0% {
+        transform: translate3d(0, 0, 0);
+    }
+
+    100% {
+        transform: translate3d(-30%, 0, 0);
+    }
+}
+
+
+@keyframes slide-right {
+    0% {
+        transform: translate3d(0, 0, 0);
+    }
+
+    100% {
+        transform: translate3d(30%, 0, 0);
+    }
+}
+
+
+/*==================================================*/
+@media (max-width: 550px) {
+    .a5-title h1 {
+        font-size: 32px;
+        margin-bottom: 2rem;
+    }
+
+    .a5-wrapper {
+        gap: 0;
+    }
+    
+    .a5-wrapper:last-child {
+        margin-top: 0;
+    }
+}

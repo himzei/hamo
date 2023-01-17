@@ -43,3 +43,32 @@
     padding-right: 10px;
     transform: scale(1.1);
 }
+
+
+/*==================================================*/
+@media (max-width: 950px) {
+    .a1-box-wrapper {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+@media (max-width: 550px) {
+    .a1-title h1 {
+        font-size: 32px;
+        margin-bottom: 2rem;
+    }
+    
+    .a1-box {
+        padding: 30px 10px 10px 30px;
+    }
+    
+    .a1-box p {
+        font-size: 16px;
+    }
+
+    .a1-box img {
+        margin-top: 1rem;
+    }
+}

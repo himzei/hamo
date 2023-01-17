@@ -300,6 +300,13 @@
 }
 
 
+@media (max-width: 550px) {
+    .a6-title h1 {
+        font-size: 32px;
+    }
+}
+
+
 @media (max-width: 450px) {
     .form-wrapper {
         padding: 0 10px;
