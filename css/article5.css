@@ -56,10 +56,38 @@
     }
 
     .a5-wrapper {
-        gap: 0;
+        width: 3120px;
+        gap: 30px;
+        animation: slide-left 30s linear infinite;
     }
     
     .a5-wrapper:last-child {
-        margin-top: 0;
+        margin-top: 10px;
+        animation: slide-right 30s linear infinite;
+    }
+
+    .a5-wrapper img {
+        width: 75px;
+    }
+
+    @keyframes slide-left {
+        0% {
+            transform: translate3d(0, 0, 0);
+        }
+    
+        100% {
+            transform: translate3d(-20%, 0, 0);
+        }
+    }
+    
+    
+    @keyframes slide-right {
+        0% {
+            transform: translate3d(0, 0, 0);
+        }
+    
+        100% {
+            transform: translate3d(20%, 0, 0);
+        }
     }
 }
