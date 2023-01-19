@@ -36,6 +36,7 @@
     <script src="owl/owl.carousel.min.js"></script>
     <script src="js/header.fixed.js"></script>
     <script src="js/aos.js"></script>
+		<script src="js/solapi.js"></script>
     <title>스터디 예약 플랫폼 - 하모</title>
 </head>
 <body>
@@ -895,26 +896,32 @@
                     <h1>
                         무엇이든 물어보세요
                     </h1>
-                </div>
-                <div class="form-wrapper">
+									</div>
+									<div class="form-wrapper">
                     <form class="gform" action="" method="POST" onSubmit="alert('문의 접수가 완료되었습니다.');">
                         <div class="input-wrapper">
                             <div class="input-title">
                                 <h1>성함 <span>*</span></h1>
                             </div>
-                            <input type="text" name="name" placeholder="하모" class="inputbox" autocomplete="off" required />
+                            <input type="text" id="name" name="name" placeholder="하모" class="inputbox" autocomplete="off" required />
                         </div>
                         <div class="input-wrapper">
                             <div class="input-title">
                                 <h1>연락처 <span>*</span></h1>
                             </div>
-                            <input type="tel" name="phone" placeholder="010-7186-0119" class="inputbox phoneNumber" autocomplete="off" required />
+                            <input type="tel" id="phone" name="phone" placeholder="010-7186-0119" class="inputbox phoneNumber" autocomplete="off" required />
                         </div>
                         <div class="input-wrapper">
                             <div class="input-title">
                                 <h1>이메일</h1>
                             </div>
-                            <input type="email" name="email" placeholder="himzei@gmail.com" class="inputbox" autocomplete="off" />
+                            <input type="email" id="email" name="email" placeholder="himzei@gmail.com" class="inputbox" autocomplete="off" />
+                        </div>
+												<div>
+                            <input type="hidden" id="pfid" value="KA01PF22041206411o33TFWW9Sl71Ppp" />
+                        </div>
+												<div>
+                            <input type="hidden" id="template-id" value="KA01TP220425021337488b6WEd5EwL3C" />
                         </div>
                         <div class="input-wrapper">
                             <div class="input-title">
@@ -959,7 +966,7 @@
                                 <p>전문보기</p>
                             </div>
                         </div>
-                        <button type="submit" class="f-submit" disabled><p>제출하기</p></button>
+                        <button onclick="btn_sendMessage()" type="submit" class="f-submit" disabled><p>제출하기</p></button>
                     </form>
                 </div>
             </div>
@@ -991,5 +998,42 @@
     </footer>
 
     <script src="js/common.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/hmac-sha256.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/components/enc-base64-min.js"></script>
+
+    <script>
+        function getPfInfo(){
+            let pfid = document.getElementById('pfid').value;
+            getPlusfriend(pfid);
+        }
+
+        function getPfInfos(){
+            getPlusfriends();
+        }
+
+        function getTemplateInfo(){
+            let templateId = document.getElementById('template-id').value;
+            getTemplate(templateId);
+        }
+
+        function getTemplateInfos(){
+            getTemplates();
+        }
+
+        function btn_sendMessage(){
+            let name = document.getElementById('name').value;
+            let tel = document.getElementById('phone').value;
+            let btn_url = "www.naver.com";
+            let templateId = document.getElementById('template-id').value;
+            let pfid = document.getElementById('pfid').value;
+
+            console.log(name);
+            console.log(tel);
+            console.log(templateId);
+						console.log(pfid);
+
+            sendMessage(name, tel, btn_url,  pfid, templateId);
+        }
+    </script>
 </body>
 </html>
