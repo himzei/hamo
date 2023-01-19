@@ -119,7 +119,7 @@ function getTemplates() {
   request.send();
 }
 // 알림톡 보낸다
-function sendMessage(name, tel, btn_url, pfid, templateId) {
+function sendMessage(이름, tel, 문의유형, pfid, templateId) {
   let url = "https://api.solapi.com/messages/v4/send";
 
   request = new XMLHttpRequest();
@@ -140,30 +140,26 @@ function sendMessage(name, tel, btn_url, pfid, templateId) {
     '{"message": {"to": "' +
     tel +
     '","from": "01071860119","text": "' +
-    name +
-    ' 알림톡 테스트입니다.","type": "ATA","kakaoOptions": {"pfId": "' +
+    이름 +
+    '스마트한 공간 설계 하모와 함께 하세요.","type": "ATA","kakaoOptions": {"pfId": "' +
     pfid +
     '","templateId": "' +
     templateId +
-    '","buttons": [{"buttonType": "WL","buttonName": "링크테스트","linkMo": "https://' +
-    btn_url +
-    '", "linkPc":"https://' +
-    btn_url +
-    '"}]}}}';
+    '","buttons": [{"buttonType": "WL",	"buttonName": "링크테스트",	"linkMo": "https://hamo.fun", "linkPc":"https://hamo.fun"}]}}}';
 
-  var data = {
-    message: {
-      to: tel,
-      from: "01071860119",
-      text: name + " 알림톡 테스트입니다.",
-      type: "ATA",
-      kakaoOptions: {
-        pfId: pfid,
-        templateId: templateId,
-        buttons: [],
-      },
-    },
-  };
+  // var data = {
+  //   message: {
+  //     to: tel,
+  //     from: "01071860119",
+  //     text: `스마트한 공간 설계 하모와 함께하세요.\n\n ${이름} 고객님 하모 ${문의유형} 상담신청이 접수 되었습니다.\n\n 입력하신 연락처로 최대한 빨리 연락 드리겠습니다.\n\n 하모를 이용해 주셔서 감사합니다.`,
+  //     type: "ATA",
+  //     kakaoOptions: {
+  //       pfId: pfid,
+  //       templateId: templateId,
+  //       buttons: [],
+  //     },
+  //   },
+  // };
 
   request.send(message);
   return;

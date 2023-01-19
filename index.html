@@ -898,7 +898,7 @@
                     </h1>
 									</div>
 									<div class="form-wrapper">
-                    <form class="gform" action="" method="POST" onSubmit="alert('문의 접수가 완료되었습니다.');">
+                    <form class="gform" action="https://script.google.com/macros/s/AKfycbyrT-_4wiIqZoHxSp8SlrwolSBCwhxo1L_IO759LnRkdUgbW9z_1JLJzFlWU55FTbpMWw/exec" method="POST" onSubmit="alert('문의 접수가 완료되었습니다.');">
                         <div class="input-wrapper">
                             <div class="input-title">
                                 <h1>성함 <span>*</span></h1>
@@ -921,7 +921,7 @@
                             <input type="hidden" id="pfid" value="KA01PF22041206411o33TFWW9Sl71Ppp" />
                         </div>
 												<div>
-                            <input type="hidden" id="template-id" value="KA01TP220425021337488b6WEd5EwL3C" />
+                            <input type="hidden" id="template-id" value="KA01TP230119021702047MRCI6xBvSfp" />
                         </div>
                         <div class="input-wrapper">
                             <div class="input-title">
@@ -1021,18 +1021,19 @@
         }
 
         function btn_sendMessage(){
-            let name = document.getElementById('name').value;
+            let 이름 = document.getElementById('name').value;
             let tel = document.getElementById('phone').value;
-            let btn_url = "www.naver.com";
+            let 문의유형 = "상담접수";
             let templateId = document.getElementById('template-id').value;
             let pfid = document.getElementById('pfid').value;
 
-            console.log(name);
+            console.log(이름);
             console.log(tel);
+						console.log(문의유형)
             console.log(templateId);
 						console.log(pfid);
 
-            sendMessage(name, tel, btn_url,  pfid, templateId);
+            sendMessage(이름, tel, 문의유형,  pfid, templateId);
         }
     </script>
 </body>
